@@ -1,0 +1,222 @@
+@import "../../../assets/style/common.less";
+
+.stu-index {
+  font-size: @fs13;
+  .stu-components-box;
+  .tl-right {
+    margin-left: 10px;
+    width: 545px;
+    .h1-name {
+      margin-top: 4px;
+      color: @black;
+      font-size: 20px;
+      font-weight: 600;
+      width: 550px;
+      .stu-overstep-hidden;
+    }
+  }
+  .tl-r-p {
+    color: @color8;
+    > .iconfont {
+      margin-right: 8px;
+      font-size: 16px;
+    }
+    .build-span {
+      margin-right: 50px;
+    }
+  }
+  .tl-r-fieldset {
+    padding: 20px 25px;
+    position: relative;
+    border: 1px solid @bordercolor;
+    > .legend {
+      position: absolute;
+      top: -20px;
+      right: 25px;
+      width: 160px;
+      color: @red;
+      text-align: center;
+      font-size: 36px;
+      background-color: #fff;
+    }
+    .sdate-p {
+      margin-top: 29px;
+    }
+    .total-day {
+      font-size: @fs14;
+      color: @primarycolor;
+      > b {
+        font-weight: bold;
+        font-size: 36px;
+      }
+    }
+  }
+  .moreicon,
+  .today-replace-wrap {
+    position: relative;
+    top: -30px;
+    float: right;
+  }
+  .inform-ul {
+    > li {
+      margin-top: 18px;
+      > a:hover {
+        color: @primary;
+      }
+    }
+  }
+  > .left-box {
+    > .bottom-left {
+      height: 540px;
+      color: @primarycolor;
+    }
+  }
+  > .right-box {
+    > .bottom-right {
+      height: 540px;
+      color: @primarycolor;
+    }
+  }
+  .today-replace-wrap {
+    margin-right: 8px;
+    > .iconfont{
+      cursor: pointer;
+      &:hover {
+        color:@primary;
+      }
+    }
+  }
+  .bottom-left {
+    .el-button {
+      padding: 7px 16px;
+      font-size: @fs12;
+    }
+  }
+  .bl-height {
+    height: 250px;
+  }
+  .bl-top-left {
+    position: relative;
+    left: 1px;
+    .bl-height;
+    padding-right: 20px;
+    border-right: @border-size-1;
+    border-bottom: @border-size-1;
+  }
+  .bl-top-right {
+    .bl-height;
+    padding-left: 20px;
+  }
+  .bl-bottom-left {
+    padding-top: 20px;
+    padding-right: 20px;
+    .bl-height;
+  }
+  .bl-bottom-right {
+    padding-top: 20px;
+    padding-left: 20px;
+    .bl-height;
+    border-left: @border-size-1;
+    border-top: @border-size-1;
+  }
+  .tickling {
+    background-color: #f39975;
+    > .iconfont {
+      font-size: 22px;
+    }
+  }
+  .evaluation {
+    background-color: #87CEFF;
+    > .iconfont {
+      font-size: 26px;
+    }
+  }
+  .exam {
+    background-color: #6cd5a0;
+    > .iconfont {
+      font-size: 26px;
+    }
+  }
+  .grade {
+    background-color: #eabe49;
+    > .iconfont {
+      font-size: 28px;
+    }
+  }
+  .article-icon-wrap {
+    .heightLine(50px; 50px; 50px);
+    .boder_radius(50%);
+    display: inline-block;
+    > .iconfont {
+      color: #fff;
+    }
+  }
+  .small-name-wrap {
+    width: 333px;
+    padding-top: 10px;
+    > .center-span {
+      font-size: @fs14;
+      float: left;
+      font-weight: bold;
+      > .gray-txt,
+      > .line-b {
+        color: rgb(187, 187, 187);
+      }
+      > .line-b {
+        padding: 0 5px;
+      }
+      > label {
+        cursor: pointer;
+      }
+    }
+    > .small-more {
+      float: right;
+    }
+  }
+  .small-bt-wrap {
+    margin-top: 30px;
+    > li {
+      margin-top: 15px;
+    }
+  }
+  .lessons-name {
+    font-size: @fs14;
+    font-weight: bold;
+    > .iconfont {
+      color: @red;
+      font-size: 20px;
+      padding-right: 10px;
+    }
+  }
+  .lessons-ul {
+    color: @color6;
+    padding-left: 20px;
+    padding-top: 15px;
+    border-left: @border-size-1;
+    padding-bottom: 15px;
+    margin-left: 10px;
+    margin-top: 2px;
+    > li {
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      > a {
+        &:hover {
+          color: @primary;
+        }
+      }
+    }
+  }
+  .change-article-ul{
+    margin-top: 10px;
+       > li{
+         cursor: pointer;
+         .widHeight(10px,10px);
+         .boder_radius(50%);
+         float: left;
+         margin-right: 10px;
+         background-color: #eee;
+       }
+  }
+}

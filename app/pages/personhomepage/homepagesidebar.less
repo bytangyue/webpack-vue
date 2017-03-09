@@ -1,0 +1,60 @@
+@import "../../../assets/style/common.less";
+
+.stu-hp-sidebar {
+  .nav-ul, .right-con {
+    .white-space;
+  }
+  .left-nav {
+    float: left;
+    width: 280px;
+  }
+  .right-con {
+    float: right;
+    width: 900px;
+  }
+  .photo-wrap {
+    height: 140px;
+    .padding-size(20px);
+    .bgImg('person-bg.png', no-repeat, center);
+    background-size: 100% 100%;
+    .photo-img {
+      width: 100%;
+      .boder_radius(5px);
+    }
+  }
+  .photo-info-wrap {
+    padding: 12px 15px;
+    padding-right: 0;
+    font-size: @fs12;
+    > h4 {
+      font-size: @fs14;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    > .desc {
+      margin-top: 15px;
+      .stu-overstep-hidden;
+    }
+  }
+  .nav-ul {
+    font-size: @fs14;
+    .router-link-active {
+      background: #f4f7f5;
+      color: @primary;
+      font-weight: bold;
+    }
+    .link {
+      display: block;
+      height: 42px;
+      padding-left: 10px;
+      line-height: 42px;
+      &:hover {
+        .router-link-active;
+      }
+    }
+    .iconfont {
+      padding-right: 8px;
+      font-size: @fs14;
+    }
+  }
+}

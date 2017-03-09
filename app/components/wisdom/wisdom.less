@@ -1,0 +1,80 @@
+@import "../../../assets/style/common.less";
+/*空白提示 start*/
+.stu-wisdom {
+  position: relative;
+  .shan-img {
+    max-width: 386px;
+    max-height: 319px;
+    .bgImg('blank-2.png', no-repeat, center);
+  }
+
+  .qiulin-img {
+    max-width: 998px;
+    max-height: 469px;
+    .bgImg('blank-1.png', no-repeat, center);
+  }
+
+  .shanshui-img {
+    max-width: 837px;
+    max-height: 475px;
+    .bgImg('blank-3.png', no-repeat, center);
+  }
+
+
+
+  .bq-wrapper {
+    color: @primarycolor;
+    background-size: 100% 100%;
+    .iconfont {
+      font-size: @fs16;
+      position: relative;
+      top: 10px;
+    }
+    .con-span {
+      line-height: 23px;
+    }
+    .cite {
+      text-align: right;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .dash-span {
+      display: inline-block;
+      vertical-align: middle;
+      border-bottom: 1px solid @primarycolor;
+    }
+    .blockquote {
+      margin-left: 20px;
+    }
+  }
+  .blank-big {
+    position: relative;
+    height: 450px;
+    font-size: 15px;
+    .dash-span {
+      width: 35px;
+    }
+    .small {
+      font-size: @fs13;
+      color: @color8;
+    }
+    .big-con{
+      height: 108px;
+      .middle-center;
+    }
+  }
+  .blank-small {
+    .middle-center;
+    height: 160px;
+    font-size: @fs14;
+    .dash-span {
+      width: 25px;
+    }
+    .small {
+      font-size: @fs12;
+      color: @color9;
+    }
+  }
+}
+
+/*空白提示 end*/

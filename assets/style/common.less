@@ -1,0 +1,138 @@
+/**
+*  这个文件是在less文件内部@import导入使用的,
+*  类名如果在页面标签上直接调用，由于多次引用，就会生成重复的类名，
+*  所以这个地方的类名或者变量“只能”在less文件里面调用
+*/
+//颜色变量 begin
+@primary: #00ad8b; //项目主体颜色
+@primaryhover: #00694f;
+@primarycolor: #333; //项目字体主体颜色
+@color9: #999;
+@color6: #666;
+@black: #000;
+@bordercolor: #ecf0f5; //border的颜色
+@color8: #888;
+@red: #ff471c; //标记突出显示使用的颜色
+//字体大小变量
+@fs16: 16px;
+@fs14: 14px;
+@fs12: 12px;
+@fs13: 13px;
+//1号大小的border,实线
+@border-size-1: 1px solid @bordercolor;
+
+/*小块内部间距，默认15px*/
+.padding-size(@size:15px) {
+  padding: @size;
+}
+
+//宽，高
+.widHeight(@width:px;@height:px) {
+  width: @width;
+  height: @height;
+}
+
+//高和行高，宽,默认居中
+.heightLine(@height:px;@line-height:px;@width:px;@text:center) {
+  height: @height;
+  line-height: @line-height;
+  width: @width;
+  text-align: @text;
+}
+
+//圆角
+.boder_radius(@radius) {
+  -moz-border-radius: @radius; /* Firefox */
+  -webkit-border-radius: @radius; /* Safari 和 Chrome */
+  border-radius: @radius; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+}
+
+//css设置背景图片
+.bgImg(@url:'';@repeat:no-repeat;@position:'') {
+  background-image: url('../images/@{url}');
+  background-repeat: @repeat;
+  background-position: @position;
+}
+
+//白色背景
+.white-bgcolor {
+  background-color: #fff;
+}
+
+//超出隐藏
+.stu-overstep-hidden {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+//垂直左右居中 需要具体使用的地方设置width , height
+.middle-center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+
+//白色背景块
+.white-space {
+  .padding-size(20px);
+  .white-bgcolor;
+}
+
+//模块组合 begin
+.stu-components-box {
+  .margin-top-20 {
+    margin-top: 20px;
+  }
+  .left-box {
+    float: left;
+  }
+  .right-box {
+    float: right;
+  }
+  > .left-box {
+    width: 880px;
+    .top-left {
+      .white-space;
+    }
+    .bottom-left {
+      .white-space;
+      .margin-top-20;
+    }
+  }
+  > .right-box {
+    width: 300px;
+    .top-right {
+      .white-space;
+    }
+    .content-right {
+      .margin-top-20;
+      .white-space;
+    }
+    .bottom-right {
+      .margin-top-20;
+      .white-space;
+    }
+  }
+}
+
+//模块组合 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

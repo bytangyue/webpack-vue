@@ -1,0 +1,44 @@
+{
+  "name": "resetstudent",
+  "version": "1.0.0",
+  "description": "Refactoring student",
+  "main": "main.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "set WEBPACK_ENV=dev&&webpack-dev-server --inline --port 8080 --progress --colors --hot --content-base build",
+    "production": "set WEBPACK_ENV=production&&webpack"
+  },
+  "keywords": [
+    "refactor"
+  ],
+  "author": "ty",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.4.1",
+    "autoprefixer-loader": "^3.2.0",
+    "css-loader": "^0.25.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.22.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "vue-loader": "^10.0.0",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.1"
+  },
+  "dependencies": {
+    "element-theme": "^0.2.0",
+    "element-theme-default": "^1.0.6",
+    "element-ui": "^1.0.5",
+    "jquery": "^1.12.4",
+    "normalize.css": "^5.0.0",
+    "nprogress": "^0.2.0",
+    "reset.css": "^2.0.2",
+    "vue": "^2.1.4",
+    "vue-resource": "^1.0.3",
+    "vue-router": "^2.1.0",
+    "vue-template-compiler": "^2.1.4"
+  }
+}

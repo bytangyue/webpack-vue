@@ -1,0 +1,82 @@
+@import "../../../assets/style/common.less";
+.stu-login {
+  .warning {
+    line-height: 36px;
+    font-size: @fs14;
+    text-align: center;
+    .bowerSupport {display: none;}
+    .login-warning {color: red}
+  }
+  .banner{
+    .bgImg("banner.png");
+    background-size: 100% 430px;
+    height: 430px;
+    position: relative;
+
+  }
+  .login-box{
+    position: absolute;
+    top: 20px;
+    left: 70%;
+    .widHeight(347px,338px);
+    background: #fff;
+    padding: 0 20px;
+    font-family:-webkit-pictograph;
+    .title{
+      margin: 23px 0 20px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .errorInfo{
+      color: red;
+    }
+    .input-group{
+      margin-top: 25px;
+      .widHeight(100%,38px);
+      .boder_radius(6px);
+      border: 1px #c0c0c0 solid;
+    }
+    .input-group-label{
+      display: inline-block;
+      .heightLine(100%,40px,40px);
+      text-align: center;
+      cursor: pointer;
+      i{
+        font-size: 20px;
+        color: gainsboro;
+      }
+
+    }
+    .input-user{
+      border-right: 1px #c0c0c0 solid;
+    }
+    .form-field{
+      position: relative;
+      top: -3px;
+      .widHeight(216px,30px);
+      border: none;
+      &:focus{
+        outline: none;
+      }
+    }
+    .loginBtn{
+      background: #ff474c;
+      border: none;
+      .boder_radius(6px);
+      .heightLine(40px,40px,100%);
+      margin-top: 25px;
+      color: #fff;
+      font-size: 24px;
+      font-weight: normal;
+      cursor: pointer;
+    }
+  }
+  .foot{
+    text-align: center;
+    @fs12: 12px;
+    margin-top: 10px;
+  }
+}
+
+
+

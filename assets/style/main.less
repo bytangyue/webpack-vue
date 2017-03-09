@@ -1,0 +1,159 @@
+@import "./common.less";
+
+/**
+* 这个文件是在main.js里面引用的，试用于整个项目
+* 其他页面不需要再引入了，在html标签上直接写在class上使用就行
+*/
+/*初始化或重置一些元素样式 begin*/
+body {
+  color: #575757;
+  font-family: "Microsoft Yahei";
+  background-color: #f1f1f1;
+  font-size: 14px;
+  min-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: @primarycolor;
+}
+
+img {
+  vertical-align: middle
+}
+
+/*初始化或重置一些元素样式 end*/
+.m-t-10 {
+  margin-top: 10px;
+}
+
+.m-t-15 {
+  margin-top: 15px;
+}
+
+.m-t-20 {
+  margin-top: 20px;
+}
+
+.f-l {
+  float: left;
+}
+
+.f-r {
+  float: right;
+}
+
+.stuCorAct {
+  color: @primary !important;
+}
+
+.stuBackAct {
+  background-color: @primary !important;
+}
+
+//主体内容宽度
+.stu-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+//内容区域的布局
+.stu-container-padding {
+  padding: 25px 0;
+  flex: 1;
+}
+//伪元素清除浮动
+.stu-after-clear {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+//父元素清除浮动
+.stu-parent-clear {
+  overflow: hidden;
+  zoom: 1;
+}
+
+//两栏布局，在less的父class内调用
+.two-columns {
+  .stu-after-clear;
+  //display: flex;
+  //display: -webkit-flex; /* Safari */
+  //justify-content: space-between;
+}
+.no-pointer{
+  cursor: text;
+}
+.pointer{
+  cursor: pointer;
+}
+.stu-red {
+  color: @red;
+}
+
+.padding-l-r {
+  padding: 0 5px;
+}
+
+/**按钮公用部分* end*/
+.stu-green-btn {
+  border-color: @primary;
+  color: @primary;
+  &:hover {
+    color: #fff;
+    background-color: @primary !important;
+  }
+  &:focus {
+    color: #fff;
+    background-color: #008f73 !important;
+  }
+}
+
+.stu-gray-btn {
+  border-color: #ccc !important;
+  color: @color9;
+  &:hover {
+    color: #fff;
+    background-color: #ccc !important;
+  }
+  &:focus {
+    color: #fff;
+    background-color: #b1b1b1 !important;
+  }
+}
+
+.stu-orange-btn {
+  border-color: @red;
+  color: @red;
+  &:hover {
+    color: #fff;
+    background-color: @red !important;
+  }
+  &:focus {
+    color: #fff;
+    background-color: #e7431d !important;
+  }
+}
+
+/**按钮公用部分* end*/
+.stu-list-item {
+  > li {
+    padding: 20px 0;
+    border-bottom: @border-size-1;
+  }
+}
+
+
+
+
+
+
+
+
+
