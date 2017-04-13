@@ -24,7 +24,7 @@
                     </ul>
                 </li>
                 <!--to="hpmystudy" to的值和路由对象的path匹配-->
-                <li><router-link to="/hpmystudy">个人主页</router-link></li>
+                <li><router-link to="/homepage/hpmystudy/6" exact>个人主页</router-link></li>
             </ul>
             <div class="portrait">
                 <img src="../../../assets/images/1.png" alt="" class="photo-img">

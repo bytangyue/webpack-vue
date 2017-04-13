@@ -4,10 +4,10 @@
             <el-row class="top-left two-columns">
                 <el-col :span="8" class="left-box"><img src="../../../assets/images/default.png" alt=""></el-col>
                 <el-col :span="16" class="right-box tl-right">
-                    <h1 class="h1-name">2016037788704黄tttt转学000科JAVA双元班</h1>
+                    <h1 class="h1-name">转学00990科双元班</h1>
                     <p class="tl-r-p m-t-20">
-                        <i class="iconfont building">&#xe670;</i><span class="build-span">20160304黄转测试校区</span>
-                        <i class="iconfont usersicon">&#xe67d;</i><span>15人</span>
+                        <i class="iconfont building">&#xe670;</i><span class="build-span">20160304黄转测试校99区</span>
+                        <i class="iconfont usersicon">&#xe67d;</i><span>18人</span>
                     </p>
                     <div class="tl-r-fieldset m-t-20">
                         <span class="legend">100<span class="total-day"><b>/</b> 100天</span> </span>

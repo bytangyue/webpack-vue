@@ -7,5 +7,12 @@
 
 </style>
 <script>
-
+    module.exports = {
+        name: 'hpmynotes',
+        data: function(){
+            return {
+                txt: '登录'
+            }
+        }
+    };
 </script>

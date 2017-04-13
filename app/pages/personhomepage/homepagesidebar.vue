@@ -12,10 +12,10 @@
                 </el-row>
                 <ul class="nav-ul">
                     <li>
-                        <router-link class="link" to="hpmystudy"><i class="iconfont">&#xe611;</i>我的11学习</router-link>
+                        <router-link class="link" to="/homepage/hpmystudy/6"><i class="iconfont">&#xe611;</i>我的11学习</router-link>
                     </li>
                     <li>
-                        <router-link class="link" to="hpmynotes"><i class="iconfont">&#xe691;</i>我的笔记</router-link>
+                        <router-link class="link" to="/homepage/hpmynotes"><i class="iconfont">&#xe691;</i>我的笔记</router-link>
                     </li>
                     <li>
                         <router-link class="link" to="1"><i class="iconfont">&#xe67e;</i>我的提问</router-link>

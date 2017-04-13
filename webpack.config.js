@@ -36,8 +36,14 @@ var plugins = [
     new webpack.HotModuleReplacementPlugin()   //全局开启代码热替换，修改代码后实时更新
 ];
 var devtoolstr = '';
+var entryArr = [];
+var publicPath = '';
 if (env === 'production') {//生产环境---压缩
     devtoolstr = 'cheap-module-source-map';
+    outputFile = '[name].bundle.min.js';
+    outputFolder = 'dist';
+    publicPath = '';
+    entryArr =  [path.resolve(__dirname, 'app/main.js')];
     var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
     plugins.push(new UglifyJsPlugin({
         minimize: true,
@@ -46,28 +52,28 @@ if (env === 'production') {//生产环境---压缩
         },
         except: ['$super', '$', 'exports', 'require']	//排除关键字;
     }));
-    outputFile = '[name].bundle.min.js';
-    outputFolder = 'dist';
-} else {
+} else {//package.json 中的scripts的dev的那种配置方式是自动刷新的cli模式
+    entryArr =  ["webpack/hot/dev-server",
+        path.resolve(__dirname, 'app/main.js')];
     outputFile = '[name].bundle.js';
     outputFolder = 'build';
-    devtoolstr = 'source-map';//有对应的引用映射
+   // publicPath = outputFolder;
+    devtoolstr = '';//有对应的引用映射，但是这会打包很大的文件
    //devtoolstr = 'cheap-module-eval-source-map';
 }
 function assetsPath(paths) {
     return path.posix.join('assets', paths);
 }
-module.exports = {
+var config = {
     debug: true,
     entry: {
-        main: ["webpack-dev-server/client?http://localhost:8080/",
-            "webpack/hot/dev-server", 'babel-polyfill',
-            path.resolve(__dirname, 'app/main.js')]
+        main:entryArr
     },
     clearBeforeBuild: true,  //清除之前构建的旧文件，以便重新构建
     output: {
         path: path.resolve(__dirname, outputFolder),
         filename: outputFile,
+        publicPath:publicPath
         //来指定编译后的包(bundle)的访问位置,也就是index.html，
         // link（href）和script（src）前会加一个这个publicPath路径
         // publicPath:'http://127.0.0.1:8080/'+outputFolder+'/'
@@ -123,16 +129,22 @@ module.exports = {
         //当出现 Node.js 模块依赖查找失败的时候    fallback
         fallback: path.join(__dirname, "node_modules")
     },
-    plugins: plugins,
-    devServer: {
-        proxy: {
-            '/dual-student/*': {
-                changeOrigin: true,
-                target: 'http://dev1.boxuegu.com:58000/',
-                host: 'boxuegu.com'
-            }
-        },
-        inline: true,
-        hot: true
-    }
+    plugins: plugins
 };
+if (env === 'dev') {//开发环境--本地服务
+     config.devServer = {
+         proxy: {
+             '/dual-student/*': {
+                 changeOrigin: true,
+                 target: 'http://dev1.boxuegu.com:58000/',
+                 host: 'boxuegu.com'
+
+             }
+         },
+         //设置为true,router.js中为html5 history模式时，刷新页面不会出现页面空白的问题
+         historyApiFallback: true,
+         inline: true,
+         hot: true
+     }
+ }
+module.exports = config;

@@ -67,27 +67,31 @@ module.exports = new VueRouter({
                     component: function (resolve) {
                         return require(['../pages/grouphomepage/grouphomepage.vue'], resolve)
                     }
+                }
+            ]
+        },
+        {
+            name: 'homepage',
+            path: '/',
+            components: {
+                sidebar: stuHeader,
+                content: function (resolve) {
+                    return require(['../pages/personhomepage/homepagesidebar.vue'], resolve)
+                },
+                footer: stuFooter
+            },
+            children: [
+                {
+                    path: 'hpmystudy',
+                    component: function (resolve) {
+                        return require(['../pages/personhomepage/hpmystudy/hpmystudy.vue'], resolve)
+                    }
                 },
                 {
-                    name: 'homepage',
-                    path: 'homepage',
+                    path: 'hpmynotes',
                     component: function (resolve) {
-                        return require(['../pages/personhomepage/homepagesidebar.vue'], resolve)
-                    },
-                    children: [
-                        {
-                            path: 'hpmystudy/:id',
-                            component: function (resolve) {
-                                return require(['../pages/personhomepage/hpmystudy/hpmystudy.vue'], resolve)
-                            }
-                        },
-                        {
-                            path: 'hpmynotes',
-                            component: function (resolve) {
-                                return require(['../pages/personhomepage/hpmynotes/hpmynotes.vue'], resolve)
-                            }
-                        }
-                    ]
+                        return require(['../pages/personhomepage/hpmynotes/hpmynotes.vue'], resolve)
+                    }
                 }
             ]
         },

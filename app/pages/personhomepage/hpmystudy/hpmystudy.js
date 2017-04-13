@@ -15,5 +15,8 @@ module.exports = {
         return {
             currentPage: 5
         };
+    },
+    mounted:function(){
+        console.log(this.$route.params.id);
     }
 }
